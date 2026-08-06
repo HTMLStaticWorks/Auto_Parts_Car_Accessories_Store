@@ -1,0 +1,507 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | Premium Auto Parts</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f35b04' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='3'></circle><path d='M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z'></path></svg>">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .shop-hero {
+            background: linear-gradient(0deg, var(--matte-black) 0%, rgba(15,15,17,0.8) 100%),
+                        url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&w=2000&auto=format&fit=crop') center/cover;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .filter-sidebar {
+            background: var(--carbon-gray);
+            border-right: 1px solid rgba(255,255,255,0.05);
+            height: 100%;
+            padding: 20px;
+        }
+        
+        .product-card {
+            border: 1px solid rgba(255,255,255,0.05);
+            background: var(--matte-black-light);
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            transition: all 0.3s;
+        }
+        
+        .product-card:hover {
+            border-color: var(--metallic-orange);
+            transform: translateY(-5px);
+            box-shadow: var(--orange-glow);
+        }
+        
+        .product-actions {
+            position: absolute;
+            top: 10px;
+            right: -50px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            transition: 0.3s;
+        }
+        
+        .product-card:hover .product-actions {
+            right: 10px;
+        }
+        
+        .action-btn {
+            width: 35px; height: 35px;
+            border-radius: 50%;
+            background: rgba(15,15,17,0.9);
+            border: 1px solid var(--metallic-orange);
+            color: var(--metallic-orange);
+            display: flex; justify-content: center; align-items: center;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        
+        .action-btn:hover {
+            background: var(--metallic-orange);
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-xl navbar-dark fixed-top navbar-glass">
+        <div class="container-fluid px-4 px-lg-5">
+            <a class="navbar-brand magnetic-wrap" href="index.html">
+                <div class="brand-emblem"><div class="brand-emblem-inner"><i data-lucide="settings" style="color: var(--metallic-orange); width: 18px;"></i></div></div>
+                AP & CA
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home-2.html">Home Premium</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="shop.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="categories.html">Categories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="brands.html">Brands</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <a href="#" class="text-white magnetic-wrap" id="themeToggle"><i data-lucide="moon"></i></a>
+                    <a href="#" class="text-white magnetic-wrap" id="rtlToggle"><i data-lucide="type"></i></a>
+                    <a href="cart.html" class="text-white magnetic-wrap position-relative">
+                        <i data-lucide="shopping-cart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="background-color: var(--metallic-orange) !important;">
+                            2
+                        </span>
+                    </a>
+                    <a href="login.html" class="btn-secondary ms-3">Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Section 1: Hero -->
+        <section class="shop-hero mt-0 pt-5">
+            <div class="container text-center fade-up">
+                <h1 class="display-3 fw-bold mb-3">Premium Parts Catalog</h1>
+                <p class="lead text-muted max-w-700 mx-auto">Explore our extensive collection of high-performance components and luxury accessories.</p>
+            </div>
+        </section>
+
+        <!-- Section 2: Filter Top Bar (Mobile friendly) -->
+        <section class="py-3 border-bottom" style="border-color: rgba(255,255,255,0.05) !important; background: var(--matte-black);">
+            <div class="container d-flex justify-content-between align-items-center">
+                <button class="btn btn-outline-light d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#filterSidebar">
+                    <i data-lucide="filter" class="me-2"></i> Filters
+                </button>
+                <div class="d-none d-lg-flex gap-3">
+                    <span class="text-muted d-flex align-items-center"><i data-lucide="filter" class="me-2"></i> Advanced Filters Active</span>
+                </div>
+                <div>
+                    <select class="form-select bg-dark text-white border-secondary" style="width: 200px;">
+                        <option>Sort By: Featured</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                        <option>Newest Arrivals</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Products & Filters Grid -->
+        <section class="py-5" style="background: var(--matte-black);">
+            <div class="container-fluid px-lg-5">
+                <div class="row">
+                    <!-- Filters Sidebar (Desktop) -->
+                    <div class="col-lg-3 d-none d-lg-block fade-up">
+                        <div class="filter-sidebar rounded">
+                            <h4 class="mb-4">Filter By</h4>
+                            
+                            <!-- Categories -->
+                            <div class="mb-4">
+                                <h6 class="text-uppercase text-muted mb-3">Category</h6>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input filter-checkbox" data-type="category" value="Engine" type="checkbox" id="cat1">
+                                    <label class="form-check-label" for="cat1">Engine Components</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input filter-checkbox" data-type="category" value="Exhaust" type="checkbox" id="cat2">
+                                    <label class="form-check-label" for="cat2">Exhaust Systems</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input filter-checkbox" data-type="category" value="Brakes" type="checkbox" id="cat3">
+                                    <label class="form-check-label" for="cat3">Brakes & Rotors</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input filter-checkbox" data-type="category" value="Suspension" type="checkbox" id="cat4">
+                                    <label class="form-check-label" for="cat4">Suspension</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input filter-checkbox" data-type="category" value="Wheels" type="checkbox" id="cat5">
+                                    <label class="form-check-label" for="cat5">Wheels</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input filter-checkbox" data-type="category" value="Interior" type="checkbox" id="cat6">
+                                    <label class="form-check-label" for="cat6">Interior</label>
+                                </div>
+                            </div>
+                            
+                            <!-- Brands -->
+                            <div class="mb-4 border-top pt-4 border-secondary">
+                                <h6 class="text-uppercase text-muted mb-3">Brands</h6>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input filter-checkbox" data-type="brand" value="Brembo" type="checkbox" id="brand1">
+                                    <label class="form-check-label" for="brand1">Brembo</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input filter-checkbox" data-type="brand" value="Akrapovič" type="checkbox" id="brand2">
+                                    <label class="form-check-label" for="brand2">Akrapovič</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input filter-checkbox" data-type="brand" value="Ohlins" type="checkbox" id="brand3">
+                                    <label class="form-check-label" for="brand3">Ohlins</label>
+                                </div>
+                            </div>
+                            
+                            <!-- Vehicle Type -->
+                            <div class="mb-4 border-top pt-4 border-secondary">
+                                <h6 class="text-uppercase text-muted mb-3">Vehicle Type</h6>
+                                <select id="makeSelect" class="form-select bg-dark text-white border-secondary mb-2">
+                                    <option value="">Select Make</option>
+                                    <option value="Porsche">Porsche</option>
+                                    <option value="BMW">BMW</option>
+                                    <option value="Audi">Audi</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Price Range -->
+                            <div class="mb-4 border-top pt-4 border-secondary">
+                                <h6 class="text-uppercase text-muted mb-3">Price Range: <span id="priceDisplay">$5000+</span></h6>
+                                <input type="range" id="priceRange" class="form-range" min="0" max="5000" step="100" value="5000">
+                                <div class="d-flex justify-content-between text-muted small">
+                                    <span>$0</span>
+                                    <span>$5000+</span>
+                                </div>
+                            </div>
+
+                            <!-- Stock -->
+                            <div class="mb-4 border-top pt-4 border-secondary">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input filter-checkbox" data-type="stock" type="checkbox" role="switch" id="inStock">
+                                    <label class="form-check-label" for="inStock">In Stock Only</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Products Grid -->
+                    <div class="col-lg-9">
+                        <div class="row g-4">
+                            <!-- Product Item 1 -->
+                            <div class="col-md-6 col-xl-4 fade-up">
+                                <div class="product-card h-100">
+                                    <div class="position-relative overflow-hidden bg-white rounded-top" style="height: 400px;">
+                                        <img src="images/ohlins_coilovers.png" class="w-100 h-100 object-fit-contain p-3" alt="Coilover">
+                                        <div class="product-actions">
+                                            <div class="action-btn" title="Quick View"><i data-lucide="eye" size="18"></i></div>
+                                            <div class="action-btn" title="Add to Wishlist"><i data-lucide="heart" size="18"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="p-4">
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <span class="badge bg-secondary text-white">Suspension</span>
+                                            <span class="text-success small"><i data-lucide="check-circle" size="14"></i> In Stock</span>
+                                        </div>
+                                        <h5 class="mb-3">Ohlins Road & Track Coilovers</h5>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h4 class="mb-0" style="color: var(--metallic-orange);">$2,450</h4>
+                                            <button class="btn btn-outline-light btn-sm"><i data-lucide="shopping-cart" size="16"></i> Add</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Product Item 2 -->
+                            <div class="col-md-6 col-xl-4 fade-up" style="transition-delay: 0.1s;">
+                                <div class="product-card h-100">
+                                    <div class="position-relative overflow-hidden bg-white rounded-top" style="height: 400px;">
+                                        <img src="images/brembo_gt.png" class="w-100 h-100 object-fit-contain p-3" alt="Brakes">
+                                        <div class="product-actions">
+                                            <div class="action-btn"><i data-lucide="eye" size="18"></i></div>
+                                            <div class="action-btn"><i data-lucide="heart" size="18"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="p-4">
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <span class="badge bg-secondary text-white">Brakes</span>
+                                            <span class="text-success small"><i data-lucide="check-circle" size="14"></i> In Stock</span>
+                                        </div>
+                                        <h5 class="mb-3">Brembo 6-Piston GT Kit</h5>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h4 class="mb-0" style="color: var(--metallic-orange);">$3,200</h4>
+                                            <button class="btn btn-outline-light btn-sm"><i data-lucide="shopping-cart" size="16"></i> Add</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product Item 3 -->
+                            <div class="col-md-6 col-xl-4 fade-up" style="transition-delay: 0.2s;">
+                                <div class="product-card h-100">
+                                    <div class="position-relative overflow-hidden bg-white rounded-top" style="height: 400px;">
+                                        <img src="images/titanium_exhaust.png" class="w-100 h-100 object-fit-contain p-3" alt="Exhaust">
+                                        <div class="product-actions">
+                                            <div class="action-btn"><i data-lucide="eye" size="18"></i></div>
+                                            <div class="action-btn"><i data-lucide="heart" size="18"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="p-4">
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <span class="badge bg-secondary text-white">Exhaust</span>
+                                            <span class="text-warning small"><i data-lucide="alert-circle" size="14"></i> Low Stock</span>
+                                        </div>
+                                        <h5 class="mb-3">Titanium Slip-on Exhaust</h5>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h4 class="mb-0" style="color: var(--metallic-orange);">$1,850</h4>
+                                            <button class="btn btn-outline-light btn-sm"><i data-lucide="shopping-cart" size="16"></i> Add</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Product Item 4 -->
+                            <div class="col-md-6 col-xl-4 fade-up">
+                                <div class="product-card h-100">
+                                    <div class="position-relative overflow-hidden bg-white rounded-top" style="height: 400px;">
+                                        <img src="images/carbon_intake.png" class="w-100 h-100 object-fit-contain p-3" alt="Engine Part">
+                                    </div>
+                                    <div class="p-4">
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <span class="badge bg-secondary text-white">Engine</span>
+                                            <span class="text-success small"><i data-lucide="check-circle" size="14"></i> In Stock</span>
+                                        </div>
+                                        <h5 class="mb-3">Carbon Intake System</h5>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h4 class="mb-0" style="color: var(--metallic-orange);">$950</h4>
+                                            <button class="btn btn-outline-light btn-sm"><i data-lucide="shopping-cart" size="16"></i> Add</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Product Item 5 -->
+                            <div class="col-md-6 col-xl-4 fade-up">
+                                <div class="product-card h-100">
+                                    <div class="position-relative overflow-hidden bg-white rounded-top" style="height: 400px;">
+                                        <img src="images/forged_wheels.png" class="w-100 h-100 object-fit-contain p-3" alt="Track Wheels">
+                                    </div>
+                                    <div class="p-4">
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <span class="badge bg-secondary text-white">Wheels</span>
+                                            <span class="text-success small"><i data-lucide="check-circle" size="14"></i> In Stock</span>
+                                        </div>
+                                        <h5 class="mb-3 text-uppercase">Forged Track Wheels</h5>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h4 class="mb-0" style="color: var(--metallic-orange);">$4,500</h4>
+                                            <button class="btn btn-outline-light btn-sm"><i data-lucide="shopping-cart" size="16"></i> Add</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product Item 6 -->
+                            <div class="col-md-6 col-xl-4 fade-up">
+                                <div class="product-card h-100">
+                                    <div class="position-relative overflow-hidden bg-white rounded-top" style="height: 400px;">
+                                        <img src="images/carbon_steering.png" class="w-100 h-100 object-fit-contain p-3" alt="Steering Wheel">
+                                    </div>
+                                    <div class="p-4">
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <span class="badge bg-secondary text-white">Interior</span>
+                                            <span class="text-warning small"><i data-lucide="alert-circle" size="14"></i> Low Stock</span>
+                                        </div>
+                                        <h5 class="mb-3 text-uppercase">Carbon Steering Wheel</h5>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h4 class="mb-0" style="color: var(--metallic-orange);">$1,200</h4>
+                                            <button class="btn btn-outline-light btn-sm"><i data-lucide="shopping-cart" size="16"></i> Add</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Pagination -->
+                        <nav class="mt-5 d-flex justify-content-center fade-up">
+                            <ul class="pagination pagination-dark">
+                                <li class="page-item disabled"><a class="page-link bg-dark border-secondary text-muted" href="#">Prev</a></li>
+                                <li class="page-item active"><a class="page-link border-secondary" style="background-color: var(--metallic-orange); border-color: var(--metallic-orange);" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link bg-dark border-secondary text-white" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link bg-dark border-secondary text-white" href="#">Next</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Bulk Order CTA -->
+        <section class="py-5" style="background: linear-gradient(45deg, var(--gunmetal), var(--matte-black));">
+            <div class="container py-4">
+                <div class="glass-panel p-5 text-center fade-up" style="border-color: var(--metallic-orange);">
+                    <h2 class="mb-3">Equipping Your Workshop?</h2>
+                    <p class="lead text-muted mb-4">Register as a B2B partner for wholesale pricing on bulk orders and exclusive supply lines.</p>
+                    <a href="contact.html" class="btn-premium">Contact B2B Sales</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Reused -->
+    <footer class="premium-footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <div class="navbar-brand mb-4">
+                        <div class="brand-emblem" style="width: 30px; height: 30px;">
+                            <div class="brand-emblem-inner" style="width: 24px; height: 24px;">
+                                <i data-lucide="settings" style="color: var(--metallic-orange); width: 14px;"></i>
+                            </div>
+                        </div>
+                        AP & CA
+                    </div>
+                    <p class="text-muted pe-4">The ultimate destination for premium automotive parts, performance upgrades, and genuine accessories.</p>
+                    <div class="mt-4">
+                        <a href="#" class="social-icon" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                        <a href="#" class="social-icon" aria-label="X (Twitter)"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg></a>
+                        <a href="#" class="social-icon" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                        <a href="#" class="social-icon" aria-label="YouTube"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="footer-title">Categories</h5>
+                    <a href="categories.html" class="footer-link">Engine Parts</a>
+                    <a href="categories.html" class="footer-link">Brake Systems</a>
+                    <a href="categories.html" class="footer-link">Exhaust</a>
+                    <a href="categories.html" class="footer-link">Interior</a>
+                    <a href="categories.html" class="footer-link">Suspension</a>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <a href="about.html" class="footer-link">About Us</a>
+                    <a href="brands.html" class="footer-link">Our Brands</a>
+                    <a href="services.html" class="footer-link">Services</a>
+                    <a href="shop.html" class="footer-link">Shop</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5 class="footer-title">Newsletter</h5>
+                    <p class="text-muted">Subscribe for exclusive performance parts drops.</p>
+                    <div class="input-group mt-3">
+                        <input type="email" class="form-control newsletter-input" placeholder="Email Address">
+                        <button class="btn newsletter-btn" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="text-center text-muted small pb-2">
+                &copy; 2026 Auto Parts & Car Accessories Store. Premium Performance.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>lucide.createIcons();</script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const filterCheckboxes = document.querySelectorAll('.filter-checkbox');
+        const priceRange = document.getElementById('priceRange');
+        const priceDisplay = document.getElementById('priceDisplay');
+        const productCards = document.querySelectorAll('.product-card');
+
+        function filterProducts() {
+            const selectedCategories = Array.from(document.querySelectorAll('.filter-checkbox[data-type="category"]:checked')).map(cb => cb.value.toLowerCase());
+            const selectedBrands = Array.from(document.querySelectorAll('.filter-checkbox[data-type="brand"]:checked')).map(cb => cb.value.toLowerCase());
+            const maxPrice = parseInt(priceRange.value);
+            const inStockOnly = document.getElementById('inStock').checked;
+
+            productCards.forEach(card => {
+                const wrapper = card.parentElement;
+                
+                const categoryText = card.querySelector('.badge') ? card.querySelector('.badge').textContent.trim().toLowerCase() : '';
+                const titleText = card.querySelector('h5') ? card.querySelector('h5').textContent.trim().toLowerCase() : '';
+                const priceText = card.querySelector('h4') ? card.querySelector('h4').textContent.replace('$', '').replace(',', '') : '0';
+                const price = parseInt(priceText);
+                const stockText = card.querySelector('.small') ? card.querySelector('.small').textContent.trim().toLowerCase() : '';
+                
+                // Assuming "In Stock" is strictly text containing "in stock" (and not "low stock")
+                const isInStock = stockText.includes('in stock');
+
+                let isVisible = true;
+
+                if (selectedCategories.length > 0) {
+                    const matchCategory = selectedCategories.some(cat => categoryText.includes(cat) || cat.includes(categoryText));
+                    if (!matchCategory) isVisible = false;
+                }
+
+                if (selectedBrands.length > 0) {
+                    const matchBrand = selectedBrands.some(brand => titleText.includes(brand) || (brand === 'akrapovič' && titleText.includes('titanium')));
+                    if (!matchBrand) isVisible = false;
+                }
+
+                if (price > maxPrice) {
+                    isVisible = false;
+                }
+
+                if (inStockOnly && !isInStock) {
+                    isVisible = false;
+                }
+
+                if (isVisible) {
+                    wrapper.style.display = 'block';
+                } else {
+                    wrapper.style.display = 'none';
+                }
+            });
+        }
+
+        filterCheckboxes.forEach(cb => cb.addEventListener('change', filterProducts));
+        priceRange.addEventListener('input', function() {
+            priceDisplay.textContent = '$' + this.value + (this.value == 5000 ? '+' : '');
+            filterProducts();
+        });
+
+        filterProducts();
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Premium Auto Parts</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f35b04' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='3'></circle><path d='M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z'></path></svg>">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .services-hero {
+            background: linear-gradient(0deg, var(--matte-black) 0%, rgba(15,15,17,0.7) 100%),
+                        url('https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?q=80&w=2000&auto=format&fit=crop') center/cover;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .service-block {
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            padding: 80px 0;
+            position: relative;
+        }
+        
+        .service-block:nth-child(even) {
+            background: var(--carbon-gray);
+        }
+        .service-block:nth-child(odd) {
+            background: var(--matte-black);
+        }
+        
+        .service-icon-bg {
+            position: absolute;
+            font-size: 20rem;
+            color: rgba(255,255,255,0.02);
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-xl navbar-dark fixed-top navbar-glass">
+        <!-- Reused Navbar -->
+        <div class="container-fluid px-4 px-lg-5">
+            <a class="navbar-brand magnetic-wrap" href="index.html">
+                <div class="brand-emblem"><div class="brand-emblem-inner"><i data-lucide="settings" style="color: var(--metallic-orange); width: 18px;"></i></div></div>
+                AP & CA
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home-2.html">Home Premium</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shop.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="categories.html">Categories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="brands.html">Brands</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <a href="#" class="text-white magnetic-wrap" id="themeToggle"><i data-lucide="moon"></i></a>
+                    <a href="#" class="text-white magnetic-wrap" id="rtlToggle"><i data-lucide="type"></i></a>
+                    <a href="cart.html" class="text-white magnetic-wrap position-relative">
+                        <i data-lucide="shopping-cart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="background-color: var(--metallic-orange) !important;">
+                            2
+                        </span>
+                    </a>
+                    <a href="login.html" class="btn-secondary ms-3">Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Section 1: Hero -->
+        <section class="services-hero mt-0">
+            <div class="container text-center fade-up position-relative z-1">
+                <i data-lucide="wrench" size="64" style="color: var(--metallic-orange); margin-bottom: 20px;"></i>
+                <h1 class="display-3 fw-bold mb-3">Professional Solutions</h1>
+                <p class="lead text-muted max-w-700 mx-auto">Beyond retail. We provide comprehensive supply chain solutions for modern performance workshops.</p>
+            </div>
+        </section>
+
+        <!-- Section 2: OEM Parts Supply -->
+        <section class="service-block overflow-hidden">
+            <div class="container position-relative z-1">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0 fade-up">
+                        <img src="images/oem_parts_supply.png" class="img-fluid rounded shadow-lg w-100" style="object-fit: cover; height: 400px;" alt="OEM Parts">
+                    </div>
+                    <div class="col-lg-5 offset-lg-1 fade-up" style="transition-delay: 0.2s;">
+                        <span class="subheading d-block mb-2">B2B Core</span>
+                        <h2 class="mb-4">OEM Parts Supply</h2>
+                        <p class="text-muted mb-4">Consistent, reliable delivery of genuine OEM components for collision centers and independent repair facilities. We maintain massive inventory levels to ensure zero downtime for your bays.</p>
+                        <ul class="list-unstyled text-muted mb-4">
+                            <li class="mb-2"><i data-lucide="check" class="text-success me-2" size="18"></i> API integration with your management software</li>
+                            <li class="mb-2"><i data-lucide="check" class="text-success me-2" size="18"></i> Same-day dispatch on stock items</li>
+                            <li class="mb-2"><i data-lucide="check" class="text-success me-2" size="18"></i> Dedicated account manager</li>
+                        </ul>
+                        <a href="contact.html" class="btn-secondary">Inquire About OEM Supply</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Precision Logistics Banner -->
+        <section class="py-5 position-relative overflow-hidden" style="background: var(--matte-black);">
+            <div class="container py-5 fade-up">
+                <div class="position-relative rounded-4 overflow-hidden shadow-lg border border-secondary" style="background: rgba(255,255,255,0.02);">
+                    <img src="images/precision_logistics.png" class="img-fluid w-100" style="object-fit: cover;" alt="Precision Logistics">
+                </div>
+                <div class="text-center mt-5">
+                    <a href="contact.html" class="btn-premium magnetic-wrap">Submit Sourcing Request <i data-lucide="arrow-right" class="ms-2"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Fleet & Bulk Order Solutions -->
+        <section class="service-block overflow-hidden pb-5 mb-0">
+            <div class="container position-relative z-1 text-center fade-up">
+                <span class="subheading d-block mb-2">Wholesale</span>
+                <h2 class="mb-5">Fleet & Bulk Order Solutions</h2>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-4">
+                        <div class="glass-card p-4 h-100">
+                            <h4 class="mb-3">Tiered Pricing</h4>
+                            <p class="text-muted small">Aggressive discount structures based on monthly volume, maximizing your profit margins on standard maintenance items.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="glass-card p-4 h-100">
+                            <h4 class="mb-3">Consignment Inventory</h4>
+                            <p class="text-muted small">For high-volume partners, we offer consignment stock located physically at your premises for immediate access.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="glass-card p-4 h-100">
+                            <h4 class="mb-3">Custom Logistics</h4>
+                            <p class="text-muted small">Palletized freight, scheduled weekly drops, and priority air-freight options for critical components.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-5">
+                    <a href="contact.html" class="btn-premium px-5 py-3">Open a Wholesale Account</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="premium-footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <div class="navbar-brand mb-4">
+                        <div class="brand-emblem" style="width: 30px; height: 30px;">
+                            <div class="brand-emblem-inner" style="width: 24px; height: 24px;">
+                                <i data-lucide="settings" style="color: var(--metallic-orange); width: 14px;"></i>
+                            </div>
+                        </div>
+                        AP & CA
+                    </div>
+                    <p class="text-muted pe-4">The ultimate destination for premium automotive parts, performance upgrades, and genuine accessories.</p>
+                    <div class="mt-4">
+                        <a href="#" class="social-icon" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                        <a href="#" class="social-icon" aria-label="X (Twitter)"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg></a>
+                        <a href="#" class="social-icon" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                        <a href="#" class="social-icon" aria-label="YouTube"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="footer-title">Categories</h5>
+                    <a href="categories.html" class="footer-link">Engine Parts</a>
+                    <a href="categories.html" class="footer-link">Brake Systems</a>
+                    <a href="categories.html" class="footer-link">Exhaust</a>
+                    <a href="categories.html" class="footer-link">Interior</a>
+                    <a href="categories.html" class="footer-link">Suspension</a>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <a href="about.html" class="footer-link">About Us</a>
+                    <a href="brands.html" class="footer-link">Our Brands</a>
+                    <a href="services.html" class="footer-link">Services</a>
+                    <a href="shop.html" class="footer-link">Shop</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5 class="footer-title">Newsletter</h5>
+                    <p class="text-muted">Subscribe for exclusive performance parts drops.</p>
+                    <div class="input-group mt-3">
+                        <input type="email" class="form-control newsletter-input" placeholder="Email Address">
+                        <button class="btn newsletter-btn" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="text-center text-muted small pb-2">
+                &copy; 2026 Auto Parts & Car Accessories Store. Premium Performance.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

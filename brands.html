@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brands | Premium Auto Parts</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f35b04' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='3'></circle><path d='M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z'></path></svg>">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .brands-hero {
+            background: linear-gradient(180deg, var(--matte-black) 0%, var(--carbon-gray) 100%);
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .logo-wall-track {
+            display: flex;
+            width: calc(250px * 12);
+            animation: scroll 30s linear infinite;
+        }
+        
+        .logo-item {
+            width: 250px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: rgba(255,255,255,0.4);
+            border: 1px solid rgba(255,255,255,0.02);
+            margin: 0 10px;
+            background: rgba(255,255,255,0.01);
+            transition: 0.3s;
+        }
+        
+        .logo-item:hover {
+            color: var(--metallic-orange);
+            background: rgba(243, 91, 4, 0.05);
+            border-color: var(--metallic-orange);
+            box-shadow: var(--orange-glow);
+        }
+        
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-250px * 6)); }
+        }
+        
+        .comparison-table {
+            color: #fff;
+            border-color: rgba(255,255,255,0.1);
+        }
+        .comparison-table th, .comparison-table td {
+            background: transparent;
+            color: #ccc;
+            padding: 20px;
+            border-color: rgba(255,255,255,0.1);
+        }
+        .comparison-table th {
+            font-family: var(--font-heading);
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-xl navbar-dark fixed-top navbar-glass">
+        <!-- Reused Navbar -->
+        <div class="container-fluid px-4 px-lg-5">
+            <a class="navbar-brand magnetic-wrap" href="index.html">
+                <div class="brand-emblem"><div class="brand-emblem-inner"><i data-lucide="settings" style="color: var(--metallic-orange); width: 18px;"></i></div></div>
+                AP & CA
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home-2.html">Home Premium</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shop.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="categories.html">Categories</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="brands.html">Brands</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <a href="#" class="text-white magnetic-wrap" id="themeToggle"><i data-lucide="moon"></i></a>
+                    <a href="#" class="text-white magnetic-wrap" id="rtlToggle"><i data-lucide="type"></i></a>
+                    <a href="cart.html" class="text-white magnetic-wrap position-relative">
+                        <i data-lucide="shopping-cart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="background-color: var(--metallic-orange) !important;">
+                            2
+                        </span>
+                    </a>
+                    <a href="login.html" class="btn-secondary ms-3">Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Section 1: Hero -->
+        <section class="brands-hero mt-0 pt-5">
+            <div class="container text-center position-relative z-1 fade-up">
+                <h1 class="display-2 fw-900 mb-3 text-uppercase">The Elite <span style="color: var(--metallic-orange);">Pedigree</span></h1>
+                <p class="lead text-muted mx-auto" style="max-width: 600px;">Only the most trusted manufacturers. From direct OEM replacements to extreme performance upgrades.</p>
+            </div>
+        </section>
+
+        <!-- Section 2: OEM Brands -->
+        <section class="py-5" style="background: var(--matte-black);">
+            <div class="container py-5">
+                <div class="text-center mb-5 fade-up">
+                    <span class="subheading">Original Equipment</span>
+                    <h2 class="display-6">OEM Partners</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6 fade-up">
+                        <div class="glass-card p-4 text-center h-100 d-flex flex-column align-items-center justify-content-center">
+                            <h3 class="mb-3" style="font-family: var(--font-heading);">BOSCH</h3>
+                            <p class="text-muted small mb-0">Electronics, Sensors, Wipers</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 fade-up" style="transition-delay: 0.1s;">
+                        <div class="glass-card p-4 text-center h-100 d-flex flex-column align-items-center justify-content-center">
+                            <h3 class="mb-3" style="font-family: var(--font-heading);">DENSO</h3>
+                            <p class="text-muted small mb-0">Ignition, AC Components</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 fade-up" style="transition-delay: 0.2s;">
+                        <div class="glass-card p-4 text-center h-100 d-flex flex-column align-items-center justify-content-center">
+                            <h3 class="mb-3" style="font-family: var(--font-heading);">NGK</h3>
+                            <p class="text-muted small mb-0">Spark Plugs, Coils</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 fade-up" style="transition-delay: 0.3s;">
+                        <div class="glass-card p-4 text-center h-100 d-flex flex-column align-items-center justify-content-center">
+                            <h3 class="mb-3" style="font-family: var(--font-heading);">MAHLE</h3>
+                            <p class="text-muted small mb-0">Filters, Engine Components</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Performance Brands -->
+        <section class="py-5" style="background: var(--carbon-gray);">
+            <div class="container py-5">
+                <div class="text-center mb-5 fade-up">
+                    <span class="subheading">Track Ready</span>
+                    <h2 class="display-6">Performance Division</h2>
+                </div>
+                <div class="row g-0 rounded overflow-hidden" style="border: 1px solid rgba(255,255,255,0.05);">
+                    <div class="col-lg-4 border-end border-bottom border-secondary fade-up p-5 text-center" style="background: var(--matte-black-light);">
+                        <h4 class="mb-2">BREMBO</h4>
+                        <span class="text-muted small">Braking Systems</span>
+                    </div>
+                    <div class="col-lg-4 border-end border-bottom border-secondary fade-up p-5 text-center" style="background: var(--matte-black-light); transition-delay: 0.1s;">
+                        <h4 class="mb-2">AKRAPOVIČ</h4>
+                        <span class="text-muted small">Exhaust Systems</span>
+                    </div>
+                    <div class="col-lg-4 border-bottom border-secondary fade-up p-5 text-center" style="background: var(--matte-black-light); transition-delay: 0.2s;">
+                        <h4 class="mb-2">OHLINS</h4>
+                        <span class="text-muted small">Suspension</span>
+                    </div>
+                    <div class="col-lg-4 border-end border-secondary fade-up p-5 text-center" style="background: var(--matte-black-light); transition-delay: 0.3s;">
+                        <h4 class="mb-2">RECARO</h4>
+                        <span class="text-muted small">Racing Seats</span>
+                    </div>
+                    <div class="col-lg-4 border-end border-secondary fade-up p-5 text-center" style="background: var(--matte-black-light); transition-delay: 0.4s;">
+                        <h4 class="mb-2">HRE</h4>
+                        <span class="text-muted small">Forged Wheels</span>
+                    </div>
+                    <div class="col-lg-4 border-secondary fade-up p-5 text-center" style="background: var(--matte-black-light); transition-delay: 0.5s;">
+                        <h4 class="mb-2">GARRETT</h4>
+                        <span class="text-muted small">Turbochargers</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Brand Comparison -->
+        <section class="py-5" style="background: var(--matte-black);">
+            <div class="container py-5 fade-up">
+                <h3 class="mb-4 text-center">OEM vs Performance Matchup</h3>
+                <div class="table-responsive">
+                    <table class="table comparison-table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>OEM Standard (Ex. Bosch/Mahle)</th>
+                                <th>Performance (Ex. Brembo/Ohlins)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><i data-lucide="disc" size="18" class="me-2"></i> Brakes</td>
+                                <td>Reliable, low dust, long life</td>
+                                <td>Carbon ceramic, high heat tolerance, extreme stopping power</td>
+                            </tr>
+                            <tr>
+                                <td><i data-lucide="wind" size="18" class="me-2"></i> Exhaust</td>
+                                <td>Quiet, restrictive, steel build</td>
+                                <td>Titanium, high flow, aggressive tone</td>
+                            </tr>
+                            <tr>
+                                <td><i data-lucide="move" size="18" class="me-2"></i> Suspension</td>
+                                <td>Comfort oriented, fixed damping</td>
+                                <td>Adjustable bound/rebound, track focused</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="premium-footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <div class="navbar-brand mb-4">
+                        <div class="brand-emblem" style="width: 30px; height: 30px;">
+                            <div class="brand-emblem-inner" style="width: 24px; height: 24px;">
+                                <i data-lucide="settings" style="color: var(--metallic-orange); width: 14px;"></i>
+                            </div>
+                        </div>
+                        AP & CA
+                    </div>
+                    <p class="text-muted pe-4">The ultimate destination for premium automotive parts, performance upgrades, and genuine accessories.</p>
+                    <div class="mt-4">
+                        <a href="#" class="social-icon" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                        <a href="#" class="social-icon" aria-label="X (Twitter)"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg></a>
+                        <a href="#" class="social-icon" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                        <a href="#" class="social-icon" aria-label="YouTube"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="footer-title">Categories</h5>
+                    <a href="categories.html" class="footer-link">Engine Parts</a>
+                    <a href="categories.html" class="footer-link">Brake Systems</a>
+                    <a href="categories.html" class="footer-link">Exhaust</a>
+                    <a href="categories.html" class="footer-link">Interior</a>
+                    <a href="categories.html" class="footer-link">Suspension</a>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <a href="about.html" class="footer-link">About Us</a>
+                    <a href="brands.html" class="footer-link">Our Brands</a>
+                    <a href="services.html" class="footer-link">Services</a>
+                    <a href="shop.html" class="footer-link">Shop</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5 class="footer-title">Newsletter</h5>
+                    <p class="text-muted">Subscribe for exclusive performance parts drops.</p>
+                    <div class="input-group mt-3">
+                        <input type="email" class="form-control newsletter-input" placeholder="Email Address">
+                        <button class="btn newsletter-btn" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="text-center text-muted small pb-2">
+                &copy; 2026 Auto Parts & Car Accessories Store. Premium Performance.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

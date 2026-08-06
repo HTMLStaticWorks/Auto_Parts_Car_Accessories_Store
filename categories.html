@@ -1,0 +1,333 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories | Premium Auto Parts</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f35b04' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='3'></circle><path d='M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z'></path></svg>">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .cat-hero {
+            background: radial-gradient(circle at center, var(--carbon-light) 0%, var(--matte-black) 100%);
+            height: 40vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .cat-premium-card {
+            border: 1px solid rgba(255,255,255,0.05);
+            background: linear-gradient(135deg, var(--matte-black-light), var(--matte-black));
+            border-radius: 12px;
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+            transition: 0.4s;
+            height: 100%;
+        }
+        
+        .cat-premium-card::after {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%; width: 200%; height: 200%;
+            background: radial-gradient(circle, rgba(243, 91, 4, 0.1) 0%, transparent 60%);
+            opacity: 0;
+            transition: 0.4s;
+            transform: scale(0.5);
+        }
+        
+        .cat-premium-card:hover::after {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        .cat-premium-card:hover {
+            border-color: rgba(243, 91, 4, 0.4);
+            transform: translateY(-5px);
+        }
+        
+        .no-hover-move:hover {
+            transform: none !important;
+        }
+        
+        .cat-icon-wrap {
+            width: 70px; height: 70px;
+            background: var(--carbon-gray);
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            border: 1px solid rgba(255,255,255,0.05);
+            margin-bottom: 25px;
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-xl navbar-dark fixed-top navbar-glass">
+        <!-- Reused Navbar -->
+        <div class="container-fluid px-4 px-lg-5">
+            <a class="navbar-brand magnetic-wrap" href="index.html">
+                <div class="brand-emblem"><div class="brand-emblem-inner"><i data-lucide="settings" style="color: var(--metallic-orange); width: 18px;"></i></div></div>
+                AP & CA
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home-2.html">Home Premium</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shop.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="categories.html">Categories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="brands.html">Brands</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <a href="#" class="text-white magnetic-wrap" id="themeToggle"><i data-lucide="moon"></i></a>
+                    <a href="#" class="text-white magnetic-wrap" id="rtlToggle"><i data-lucide="type"></i></a>
+                    <a href="cart.html" class="text-white magnetic-wrap position-relative">
+                        <i data-lucide="shopping-cart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="background-color: var(--metallic-orange) !important;">
+                            2
+                        </span>
+                    </a>
+                    <a href="login.html" class="btn-secondary ms-3">Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Section 1: Hero -->
+        <section class="cat-hero mt-0 pt-5 border-bottom" style="border-color: rgba(255,255,255,0.05) !important;">
+            <div class="container text-center fade-up">
+                <span class="subheading d-block mb-3">Browse By Sub-Systems</span>
+                <h1 class="display-3 fw-bold">Vehicle Categories</h1>
+            </div>
+        </section>
+
+        <!-- Section 2: Engine Components -->
+        <section class="py-5" style="background: var(--matte-black);">
+            <div class="container py-5">
+                <div class="d-flex align-items-center justify-content-center gap-3 mb-5 fade-up text-center">
+                    <div class="d-none d-md-block" style="width: 50px; height: 2px; background: var(--metallic-orange);"></div>
+                    <h2 class="mb-0">Engine & Powertrain</h2>
+                    <div class="d-none d-md-block" style="width: 50px; height: 2px; background: var(--metallic-orange);"></div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6 fade-up d-flex">
+                        <div class="cat-premium-card magnetic-wrap w-100 p-0 overflow-hidden text-start h-100 d-flex flex-column">
+                            <img src="images/ecu_tuning.png" class="w-100" style="height: 200px; object-fit: cover;" alt="ECU Tuning">
+                            <div class="p-4 d-flex flex-column flex-grow-1">
+                                <h4 class="mb-3 position-relative z-1 text-center d-flex align-items-center justify-content-center" style="min-height: 60px;">ECU Tuning</h4>
+                                <p class="text-muted mb-4 position-relative z-1 flex-grow-1 text-center">Stand-alone systems and piggyback chips for optimized fuel delivery.</p>
+                                <a href="shop.html" class="text-white text-decoration-none position-relative z-1 mt-auto align-self-center">Explore <i data-lucide="arrow-right" size="16"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 fade-up d-flex" style="transition-delay: 0.1s;">
+                        <div class="cat-premium-card magnetic-wrap w-100 p-0 overflow-hidden text-start h-100 d-flex flex-column">
+                            <img src="images/forced_induction.png" class="w-100" style="height: 200px; object-fit: cover;" alt="Forced Induction">
+                            <div class="p-4 d-flex flex-column flex-grow-1">
+                                <h4 class="mb-3 position-relative z-1 text-center d-flex align-items-center justify-content-center" style="min-height: 60px;">Forced Induction</h4>
+                                <p class="text-muted mb-4 position-relative z-1 flex-grow-1 text-center">Turbochargers, superchargers, and intercooler piping kits.</p>
+                                <a href="shop.html" class="text-white text-decoration-none position-relative z-1 mt-auto align-self-center">Explore <i data-lucide="arrow-right" size="16"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 fade-up d-flex" style="transition-delay: 0.2s;">
+                        <div class="cat-premium-card magnetic-wrap w-100 p-0 overflow-hidden text-start h-100 d-flex flex-column">
+                            <img src="images/cooling_systems.png" class="w-100" style="height: 200px; object-fit: cover;" alt="Cooling Systems">
+                            <div class="p-4 d-flex flex-column flex-grow-1">
+                                <h4 class="mb-3 position-relative z-1 text-center d-flex align-items-center justify-content-center" style="min-height: 60px;">Cooling Systems</h4>
+                                <p class="text-muted mb-4 position-relative z-1 flex-grow-1 text-center">Aluminum radiators, oil coolers, and high-flow water pumps.</p>
+                                <a href="shop.html" class="text-white text-decoration-none position-relative z-1 mt-auto align-self-center">Explore <i data-lucide="arrow-right" size="16"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 fade-up d-flex" style="transition-delay: 0.3s;">
+                        <div class="cat-premium-card magnetic-wrap w-100 p-0 overflow-hidden text-start h-100 d-flex flex-column">
+                            <img src="images/fuel_systems.png" class="w-100" style="height: 200px; object-fit: cover;" alt="Fuel Systems">
+                            <div class="p-4 d-flex flex-column flex-grow-1">
+                                <h4 class="mb-3 position-relative z-1 text-center d-flex align-items-center justify-content-center" style="min-height: 60px;">Fuel Systems</h4>
+                                <p class="text-muted mb-4 position-relative z-1 flex-grow-1 text-center">High-flow injectors, performance pumps, and pressure regulators.</p>
+                                <a href="shop.html" class="text-white text-decoration-none position-relative z-1 mt-auto align-self-center">Explore <i data-lucide="arrow-right" size="16"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Interior Accessories -->
+        <section class="py-5" style="background: var(--carbon-gray);">
+            <div class="container py-5">
+                <div class="d-flex align-items-center justify-content-center gap-3 mb-5 fade-up text-center">
+                    <div class="d-none d-md-block" style="width: 50px; height: 2px; background: var(--metallic-orange);"></div>
+                    <h2 class="mb-0">Interior & Comfort</h2>
+                    <div class="d-none d-md-block" style="width: 50px; height: 2px; background: var(--metallic-orange);"></div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6 fade-up d-flex">
+                        <div class="cat-premium-card no-hover-move w-100 p-0 overflow-hidden text-center h-100 d-flex flex-column">
+                            <img src="images/racing_seats.png" class="w-100 bg-white p-3" style="height: 280px; object-fit: contain;" alt="Racing Seats">
+                            <div class="p-4 d-flex flex-column flex-grow-1 align-items-center justify-content-center">
+                                <h4 class="mb-3 position-relative z-1 text-center d-flex align-items-center justify-content-center" style="min-height: 60px;">Racing Seats</h4>
+                                <a href="shop.html" class="text-muted text-decoration-none small mt-auto position-relative z-1">View Parts</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 fade-up d-flex" style="transition-delay: 0.1s;">
+                        <div class="cat-premium-card no-hover-move w-100 p-0 overflow-hidden text-center h-100 d-flex flex-column">
+                            <img src="images/steering_wheel.png" class="w-100 bg-white p-3" style="height: 280px; object-fit: contain;" alt="Steering Wheels">
+                            <div class="p-4 d-flex flex-column flex-grow-1 align-items-center justify-content-center">
+                                <h4 class="mb-3 position-relative z-1 text-center d-flex align-items-center justify-content-center" style="min-height: 60px;">Steering Wheels</h4>
+                                <a href="shop.html" class="text-muted text-decoration-none small mt-auto position-relative z-1">View Parts</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 fade-up d-flex" style="transition-delay: 0.2s;">
+                        <div class="cat-premium-card no-hover-move w-100 p-0 overflow-hidden text-center h-100 d-flex flex-column">
+                            <img src="images/telemetry_gauges.png" class="w-100 bg-white p-3" style="height: 280px; object-fit: contain;" alt="Telemetry Gauges">
+                            <div class="p-4 d-flex flex-column flex-grow-1 align-items-center justify-content-center">
+                                <h4 class="mb-3 position-relative z-1 text-center d-flex align-items-center justify-content-center" style="min-height: 60px;">Telemetry Gauges</h4>
+                                <a href="shop.html" class="text-muted text-decoration-none small mt-auto position-relative z-1">View Parts</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 fade-up d-flex" style="transition-delay: 0.3s;">
+                        <div class="cat-premium-card no-hover-move w-100 p-0 overflow-hidden text-center h-100 d-flex flex-column">
+                            <img src="images/carbon_trim.png" class="w-100" style="height: 280px; object-fit: cover;" alt="Carbon Trim">
+                            <div class="p-4 d-flex flex-column flex-grow-1 align-items-center justify-content-center">
+                                <h4 class="mb-3 position-relative z-1 text-center d-flex align-items-center justify-content-center" style="min-height: 60px;">Carbon Trim</h4>
+                                <a href="shop.html" class="text-muted text-decoration-none small mt-auto position-relative z-1">View Parts</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Exterior & Lighting -->
+        <section class="py-5" style="background: var(--matte-black);">
+            <div class="container py-5">
+                <div class="d-flex align-items-center justify-content-center gap-3 mb-5 fade-up text-center">
+                    <div class="d-none d-md-block" style="width: 50px; height: 2px; background: var(--metallic-orange);"></div>
+                    <h2 class="mb-0">Exterior & Aerodynamics</h2>
+                    <div class="d-none d-md-block" style="width: 50px; height: 2px; background: var(--metallic-orange);"></div>
+                </div>
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6 fade-up">
+                        <div class="position-relative p-0 glass-card overflow-hidden" style="border-radius: 20px; height: 100%;">
+                            <img id="exteriorImageDisplay" src="images/carbon_fiber_aero_kits.png" class="w-100" style="object-fit: cover; height: 100%; min-height: 400px; transition: opacity 0.3s ease;" alt="Aerodynamics">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 fade-up" style="transition-delay: 0.2s;">
+                        <div class="d-flex flex-column gap-4" id="exteriorItemsList">
+                            <div class="p-4 border rounded exterior-item" style="background: rgba(243, 91, 4, 0.1); border-color: var(--metallic-orange) !important; cursor: pointer; transition: 0.3s;" data-image="images/carbon_fiber_aero_kits.png">
+                                <h4>Carbon Fiber Aero Kits</h4>
+                                <p class="text-muted mb-0">Front splitters, side skirts, and rear diffusers designed for maximum downforce.</p>
+                            </div>
+                            <div class="p-4 border rounded border-secondary exterior-item" style="background: rgba(255,255,255,0.02); cursor: pointer; transition: 0.3s;" data-image="images/led_laser_lighting.png">
+                                <h4>LED Laser Lighting</h4>
+                                <p class="text-muted mb-0">High-intensity discharge and laser headlight assemblies for ultimate visibility.</p>
+                            </div>
+                            <div class="p-4 border rounded border-secondary exterior-item" style="background: rgba(255,255,255,0.02); cursor: pointer; transition: 0.3s;" data-image="images/forged_wheels_exterior.png">
+                                <h4>Forged Wheels</h4>
+                                <p class="text-muted mb-0">Ultra-lightweight multi-piece forged wheels to reduce unsprung mass.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="premium-footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <div class="navbar-brand mb-4">
+                        <div class="brand-emblem" style="width: 30px; height: 30px;">
+                            <div class="brand-emblem-inner" style="width: 24px; height: 24px;">
+                                <i data-lucide="settings" style="color: var(--metallic-orange); width: 14px;"></i>
+                            </div>
+                        </div>
+                        AP & CA
+                    </div>
+                    <p class="text-muted pe-4">The ultimate destination for premium automotive parts, performance upgrades, and genuine accessories.</p>
+                    <div class="mt-4">
+                        <a href="#" class="social-icon" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                        <a href="#" class="social-icon" aria-label="X (Twitter)"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg></a>
+                        <a href="#" class="social-icon" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                        <a href="#" class="social-icon" aria-label="YouTube"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="footer-title">Categories</h5>
+                    <a href="categories.html" class="footer-link">Engine Parts</a>
+                    <a href="categories.html" class="footer-link">Brake Systems</a>
+                    <a href="categories.html" class="footer-link">Exhaust</a>
+                    <a href="categories.html" class="footer-link">Interior</a>
+                    <a href="categories.html" class="footer-link">Suspension</a>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <a href="about.html" class="footer-link">About Us</a>
+                    <a href="brands.html" class="footer-link">Our Brands</a>
+                    <a href="services.html" class="footer-link">Services</a>
+                    <a href="shop.html" class="footer-link">Shop</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5 class="footer-title">Newsletter</h5>
+                    <p class="text-muted">Subscribe for exclusive performance parts drops.</p>
+                    <div class="input-group mt-3">
+                        <input type="email" class="form-control newsletter-input" placeholder="Email Address">
+                        <button class="btn newsletter-btn" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="text-center text-muted small pb-2">
+                &copy; 2026 Auto Parts & Car Accessories Store. Premium Performance.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>lucide.createIcons();</script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const exteriorItems = document.querySelectorAll('.exterior-item');
+            const exteriorImage = document.getElementById('exteriorImageDisplay');
+            
+            exteriorItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    // Reset all items
+                    exteriorItems.forEach(i => {
+                        i.style.background = 'rgba(255,255,255,0.02)';
+                        i.style.borderColor = 'var(--bs-secondary)';
+                    });
+                    
+                    // Highlight active item
+                    item.style.background = 'rgba(243, 91, 4, 0.1)';
+                    item.style.setProperty('border-color', 'var(--metallic-orange)', 'important');
+                    
+                    // Fade out, swap, fade in
+                    exteriorImage.style.opacity = '0';
+                    setTimeout(() => {
+                        exteriorImage.src = item.dataset.image;
+                        exteriorImage.style.opacity = '1';
+                    }, 300);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

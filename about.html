@@ -1,0 +1,298 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Premium Auto Parts</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f35b04' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='3'></circle><path d='M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z'></path></svg>">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .about-hero {
+            background: url('https://images.unsplash.com/photo-1632823471565-3cefc4ee5101?q=80&w=2000&auto=format&fit=crop') center/cover;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(90deg, var(--matte-black) 0%, rgba(15,15,17,0.4) 100%);
+        }
+        
+        .timeline {
+            border-left: 2px solid rgba(255,255,255,0.1);
+            padding-left: 30px;
+            margin-left: 15px;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -39px;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--metallic-orange);
+            box-shadow: var(--orange-glow);
+        }
+        
+        .cert-card {
+            background: rgba(255,255,255,0.02);
+            border: 1px dashed rgba(255,255,255,0.1);
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        .cert-card:hover {
+            border-color: var(--metallic-orange);
+            background: rgba(243, 91, 4, 0.05);
+        }
+        
+        @media (max-width: 768px) {
+            .cert-card {
+                padding: 15px 5px;
+            }
+            .cert-card h5 {
+                font-size: 1rem;
+                word-wrap: break-word;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar Reused -->
+    <nav class="navbar navbar-expand-xl navbar-dark fixed-top navbar-glass">
+        <div class="container-fluid px-4 px-lg-5">
+            <a class="navbar-brand magnetic-wrap" href="index.html">
+                <div class="brand-emblem"><div class="brand-emblem-inner"><i data-lucide="settings" style="color: var(--metallic-orange); width: 18px;"></i></div></div>
+                AP & CA
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home-2.html">Home Premium</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shop.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="categories.html">Categories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="brands.html">Brands</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <a href="#" class="text-white magnetic-wrap" id="themeToggle"><i data-lucide="moon"></i></a>
+                    <a href="#" class="text-white magnetic-wrap" id="rtlToggle"><i data-lucide="type"></i></a>
+                    <a href="cart.html" class="text-white magnetic-wrap position-relative">
+                        <i data-lucide="shopping-cart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="background-color: var(--metallic-orange) !important;">
+                            2
+                        </span>
+                    </a>
+                    <a href="login.html" class="btn-secondary ms-3">Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Section 1: Hero -->
+        <section class="about-hero mt-0">
+            <div class="container position-relative z-1 fade-up">
+                <div class="row justify-content-center text-center">
+                    <div class="col-lg-8">
+                        <span class="subheading d-block mb-3">Our Legacy</span>
+                        <h1 class="display-3 fw-bold mb-4">Engineering <br>Excellence Since 2010</h1>
+                        <p class="lead text-muted mx-auto" style="max-width: 650px;">We don't just sell parts; we curate the finest components for automotive purists and professional builders.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Company Story Timeline -->
+        <section class="py-5" style="background: var(--matte-black);">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-lg-5 mb-5 mb-lg-0 fade-up">
+                        <h2>The Evolution of Performance</h2>
+                        <p class="text-muted mt-3">From a small performance shop to a global supplier of elite automotive components.</p>
+                        <img src="images/The Evolution of Performance.png" class="img-fluid rounded mt-4 shadow" alt="The Evolution of Performance">
+                    </div>
+                    <div class="col-lg-6 offset-lg-1 fade-up" style="transition-delay: 0.2s;">
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <h4 style="color: var(--metallic-orange);">2010</h4>
+                                <h5>The Beginning</h5>
+                                <p class="text-muted">Founded as a specialty tuning garage focusing on European imports.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h4 style="color: var(--metallic-orange);">2015</h4>
+                                <h5>OEM Partnerships</h5>
+                                <p class="text-muted">Secured direct supply lines with major European OEM manufacturers.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h4 style="color: var(--metallic-orange);">2019</h4>
+                                <h5>Global Distribution</h5>
+                                <p class="text-muted">Expanded our warehouse footprint to handle international bulk B2B orders.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h4 style="color: var(--metallic-orange);">Present Day</h4>
+                                <h5>The Elite Network</h5>
+                                <p class="text-muted">Supplying over 500+ premium workshops globally with top-tier performance parts.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Why Choose Us -->
+        <section class="py-5" style="background: var(--carbon-gray);">
+            <div class="container py-5">
+                <div class="text-center mb-5 fade-up">
+                    <h2 class="display-6">The Premium Advantage</h2>
+                </div>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-6 col-lg-3 fade-up">
+                        <div class="glass-card h-100 text-center overflow-hidden">
+                            <img src="images/Authenticity Guaranteed.png" class="w-100" style="height: 200px; object-fit: cover;" alt="Authenticity Guaranteed">
+                            <div class="p-4 p-xl-5">
+                                <h4 class="mb-3">Authenticity Guaranteed</h4>
+                                <p class="text-muted mb-0">Every part is sourced directly from the manufacturer with verifiable serial numbers.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 fade-up" style="transition-delay: 0.1s;">
+                        <div class="glass-card h-100 text-center overflow-hidden">
+                            <img src="images/Precision Logistics.png" class="w-100" style="height: 200px; object-fit: cover;" alt="Precision Logistics">
+                            <div class="p-4 p-xl-5">
+                                <h4 class="mb-3">Precision Logistics</h4>
+                                <p class="text-muted mb-0">Climate-controlled warehousing and expedited global freight for sensitive components.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 fade-up" style="transition-delay: 0.2s;">
+                        <div class="glass-card h-100 text-center overflow-hidden">
+                            <img src="images/Expert Consultation.png" class="w-100" style="height: 200px; object-fit: cover;" alt="Expert Consultation">
+                            <div class="p-4 p-xl-5">
+                                <h4 class="mb-3">Expert Consultation</h4>
+                                <p class="text-muted mb-0">Our B2B reps are former track mechanics who understand complex build sheets.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 fade-up" style="transition-delay: 0.3s;">
+                        <div class="glass-card h-100 text-center overflow-hidden">
+                            <img src="images/Exclusive Inventory.png" class="w-100" style="height: 200px; object-fit: cover;" alt="Exclusive Inventory">
+                            <div class="p-4 p-xl-5">
+                                <h4 class="mb-3">Exclusive Inventory</h4>
+                                <p class="text-muted mb-0">Access to limited-run components and rare aftermarket parts unavailable elsewhere.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Automotive Certifications -->
+        <section class="py-5" style="background: var(--matte-black);">
+            <div class="container py-5 fade-up">
+                <h3 class="text-center mb-5">Industry Certifications & Standards</h3>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-6 col-md-3">
+                        <div class="cert-card">
+                            <h5 class="mb-0">ISO 9001:2015</h5>
+                            <span class="text-muted small">Quality Management</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="cert-card">
+                            <h5 class="mb-0">TÜV SÜD</h5>
+                            <span class="text-muted small">Certified Partner</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="cert-card">
+                            <h5 class="mb-0">ASE Master</h5>
+                            <span class="text-muted small">Certified Staff</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="cert-card">
+                            <h5 class="mb-0">Authorized Dist.</h5>
+                            <span class="text-muted small">Tier 1 Network</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Reused -->
+    <footer class="premium-footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <div class="navbar-brand mb-4">
+                        <div class="brand-emblem" style="width: 30px; height: 30px;">
+                            <div class="brand-emblem-inner" style="width: 24px; height: 24px;">
+                                <i data-lucide="settings" style="color: var(--metallic-orange); width: 14px;"></i>
+                            </div>
+                        </div>
+                        AP & CA
+                    </div>
+                    <p class="text-muted pe-4">The ultimate destination for premium automotive parts, performance upgrades, and genuine accessories.</p>
+                    <div class="mt-4">
+                        <a href="#" class="social-icon" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                        <a href="#" class="social-icon" aria-label="X (Twitter)"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg></a>
+                        <a href="#" class="social-icon" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                        <a href="#" class="social-icon" aria-label="YouTube"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="footer-title">Categories</h5>
+                    <a href="categories.html" class="footer-link">Engine Parts</a>
+                    <a href="categories.html" class="footer-link">Brake Systems</a>
+                    <a href="categories.html" class="footer-link">Exhaust</a>
+                    <a href="categories.html" class="footer-link">Interior</a>
+                    <a href="categories.html" class="footer-link">Suspension</a>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <a href="about.html" class="footer-link">About Us</a>
+                    <a href="brands.html" class="footer-link">Our Brands</a>
+                    <a href="services.html" class="footer-link">Services</a>
+                    <a href="shop.html" class="footer-link">Shop</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5 class="footer-title">Newsletter</h5>
+                    <p class="text-muted">Subscribe for exclusive performance parts drops.</p>
+                    <div class="input-group mt-3">
+                        <input type="email" class="form-control newsletter-input" placeholder="Email Address">
+                        <button class="btn newsletter-btn" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="text-center text-muted small pb-2">
+                &copy; 2026 Auto Parts & Car Accessories Store. Premium Performance.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

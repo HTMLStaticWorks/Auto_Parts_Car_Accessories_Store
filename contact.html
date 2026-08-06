@@ -1,0 +1,316 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Premium Auto Parts</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f35b04' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='3'></circle><path d='M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z'></path></svg>">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .contact-hero {
+            background: var(--matte-black-light);
+            padding-top: 150px;
+            padding-bottom: 50px;
+        }
+        
+        .form-control, .form-select {
+            background: rgba(255,255,255,0.02) !important;
+            border: 1px solid rgba(255,255,255,0.1);
+            color: #fff !important;
+            padding: 15px;
+        }
+        
+        .form-control::placeholder {
+            color: rgba(255,255,255,0.5) !important;
+            opacity: 1;
+        }
+        
+        .form-control:focus, .form-select:focus {
+            background: rgba(255,255,255,0.05) !important;
+            border-color: var(--metallic-orange);
+            box-shadow: 0 0 0 0.25rem rgba(243, 91, 4, 0.25);
+        }
+        
+        [data-theme="light"] .form-control, [data-theme="light"] .form-select {
+            background: transparent !important;
+            border: 1px solid rgba(0,0,0,0.2) !important;
+            color: var(--text-primary) !important;
+        }
+        
+        [data-theme="light"] .form-control::placeholder {
+            color: rgba(0,0,0,0.5) !important;
+        }
+        
+        [data-theme="light"] .form-control:focus, [data-theme="light"] .form-select:focus {
+            border-color: var(--metallic-orange) !important;
+            background: transparent !important;
+        }
+        
+        .contact-info-card {
+            background: var(--carbon-gray);
+            border: 1px solid rgba(255,255,255,0.05);
+            padding: 40px;
+            border-radius: 12px;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-xl navbar-dark fixed-top navbar-glass scrolled">
+        <div class="container-fluid px-4 px-lg-5">
+            <a class="navbar-brand magnetic-wrap" href="index.html">
+                <div class="brand-emblem"><div class="brand-emblem-inner"><i data-lucide="settings" style="color: var(--metallic-orange); width: 18px;"></i></div></div>
+                AP & CA
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home-2.html">Home Premium</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shop.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="categories.html">Categories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="brands.html">Brands</a></li>
+
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <a href="#" class="text-white magnetic-wrap" id="themeToggle"><i data-lucide="moon"></i></a>
+                    <a href="#" class="text-white magnetic-wrap" id="rtlToggle"><i data-lucide="type"></i></a>
+                    <a href="cart.html" class="text-white magnetic-wrap position-relative">
+                        <i data-lucide="shopping-cart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="background-color: var(--metallic-orange) !important;">
+                            2
+                        </span>
+                    </a>
+                    <a href="login.html" class="btn-secondary ms-3">Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Section 1: Hero -->
+        <section class="contact-hero text-center">
+            <div class="container fade-up">
+                <span class="subheading d-block mb-3">Get in Touch</span>
+                <h1 class="display-3 fw-bold mb-4">Connect With Our Team</h1>
+            </div>
+        </section>
+
+        <!-- Section 2: Contact Info, Map & Form -->
+        <section class="py-5" style="background: var(--matte-black);">
+            <div class="container py-4">
+                <div class="row g-5">
+                    <div class="col-lg-4 fade-up">
+                        <div class="contact-info-card">
+                            <h3 class="mb-4">Global Headquarters</h3>
+                            
+                            <div class="d-flex align-items-start gap-3 mb-4">
+                                <i data-lucide="map-pin" style="color: var(--metallic-orange); flex-shrink: 0; margin-top: 5px;"></i>
+                                <div>
+                                    <h5 class="mb-1">Address</h5>
+                                    <p class="text-muted mb-0">100 Performance Drive<br>Motor City, MC 90210<br>United States</p>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex align-items-start gap-3 mb-4">
+                                <i data-lucide="phone" style="color: var(--metallic-orange); flex-shrink: 0; margin-top: 5px;"></i>
+                                <div>
+                                    <h5 class="mb-1">Phone</h5>
+                                    <p class="text-muted mb-0">Support: +1 (555) 123-4567<br>B2B Sales: +1 (555) 987-6543</p>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex align-items-start gap-3 mb-5">
+                                <i data-lucide="mail" style="color: var(--metallic-orange); flex-shrink: 0; margin-top: 5px;"></i>
+                                <div>
+                                    <h5 class="mb-1">Email</h5>
+                                    <p class="text-muted mb-0">info@autoparts-premium.com<br>dealer@autoparts-premium.com</p>
+                                </div>
+                            </div>
+                            
+                            <h5 class="mb-3">Working Hours</h5>
+                            <p class="text-muted small">Monday - Friday: 8:00 AM - 6:00 PM (EST)<br>Saturday: 9:00 AM - 2:00 PM (EST)<br>Sunday: Closed</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-8 fade-up" style="transition-delay: 0.2s;">
+                        <div class="glass-panel p-5 h-100">
+                            <!-- Nav tabs for different enquiry types -->
+                            <ul class="nav nav-tabs border-secondary mb-4" id="contactTabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active bg-transparent border-0 text-white" id="general-tab" data-bs-toggle="tab" data-bs-target="#general" type="button" role="tab">General Enquiry</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link bg-transparent border-0 text-muted" id="b2b-tab" data-bs-toggle="tab" data-bs-target="#b2b" type="button" role="tab">Bulk / Dealer Enquiry</button>
+                                </li>
+                            </ul>
+                            
+                            <div class="tab-content" id="contactTabsContent">
+                                <!-- General Contact Form -->
+                                <div class="tab-pane fade show active" id="general" role="tabpanel">
+                                    <form>
+                                        <div class="row g-3">
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="First Name" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Last Name" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="email" class="form-control" placeholder="Email Address" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Order Number (Optional)">
+                                            </div>
+                                            <div class="col-12">
+                                                <select class="form-select">
+                                                    <option selected>Subject</option>
+                                                    <option>Order Status</option>
+                                                    <option>Returns & Refunds</option>
+                                                    <option>Product Question</option>
+                                                    <option>Other</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12">
+                                                <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                                            </div>
+                                            <div class="col-12 mt-4">
+                                                <button type="submit" class="btn-premium w-100">Send Message</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                
+                                <!-- B2B Form -->
+                                <div class="tab-pane fade" id="b2b" role="tabpanel">
+                                    <form>
+                                        <div class="row g-3">
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Company / Garage Name" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Contact Person" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="email" class="form-control" placeholder="Business Email" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="tel" class="form-control" placeholder="Phone Number" required>
+                                            </div>
+                                            <div class="col-12">
+                                                <select class="form-select">
+                                                    <option selected>Business Type</option>
+                                                    <option>Independent Workshop</option>
+                                                    <option>Dealership</option>
+                                                    <option>Fleet Manager</option>
+                                                    <option>Retailer</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12">
+                                                <textarea class="form-control" rows="4" placeholder="Tell us about your volume and parts requirements" required></textarea>
+                                            </div>
+                                            <div class="col-12 mt-4">
+                                                <button type="submit" class="btn-premium w-100">Submit Application</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Google Map Integration -->
+                <div class="mt-5 rounded-4 overflow-hidden fade-up position-relative shadow-lg" style="height: 400px; border: 1px solid rgba(255,255,255,0.05);">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.733248043701!2d-118.24368492317134!3d34.05223417315694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c648b1e53667%3A0x15ebe17d62f03673!2sDowntown%20Los%20Angeles%2C%20Los%20Angeles%2C%20CA!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0; filter: grayscale(50%) contrast(1.1);" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="premium-footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <div class="navbar-brand mb-4">
+                        <div class="brand-emblem" style="width: 30px; height: 30px;">
+                            <div class="brand-emblem-inner" style="width: 24px; height: 24px;">
+                                <i data-lucide="settings" style="color: var(--metallic-orange); width: 14px;"></i>
+                            </div>
+                        </div>
+                        AP & CA
+                    </div>
+                    <p class="text-muted pe-4">The ultimate destination for premium automotive parts, performance upgrades, and genuine accessories.</p>
+                    <div class="mt-4">
+                        <a href="#" class="social-icon" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                        <a href="#" class="social-icon" aria-label="X (Twitter)"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg></a>
+                        <a href="#" class="social-icon" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                        <a href="#" class="social-icon" aria-label="YouTube"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="footer-title">Categories</h5>
+                    <a href="categories.html" class="footer-link">Engine Parts</a>
+                    <a href="categories.html" class="footer-link">Brake Systems</a>
+                    <a href="categories.html" class="footer-link">Exhaust</a>
+                    <a href="categories.html" class="footer-link">Interior</a>
+                    <a href="categories.html" class="footer-link">Suspension</a>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <a href="about.html" class="footer-link">About Us</a>
+                    <a href="brands.html" class="footer-link">Our Brands</a>
+                    <a href="services.html" class="footer-link">Services</a>
+                    <a href="shop.html" class="footer-link">Shop</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5 class="footer-title">Newsletter</h5>
+                    <p class="text-muted">Subscribe for exclusive performance parts drops.</p>
+                    <div class="input-group mt-3">
+                        <input type="email" class="form-control newsletter-input" placeholder="Email Address">
+                        <button class="btn newsletter-btn" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="text-center text-muted small pb-2">
+                &copy; 2026 Auto Parts & Car Accessories Store. Premium Performance.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        lucide.createIcons();
+        
+        // Tab switching logic for styling
+        document.querySelectorAll('.nav-tabs .nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelectorAll('.nav-tabs .nav-link').forEach(l => {
+                    l.classList.remove('text-white');
+                    l.classList.add('text-muted');
+                });
+                this.classList.remove('text-muted');
+                this.classList.add('text-white');
+            });
+        });
+    </script>
+</body>
+</html>
