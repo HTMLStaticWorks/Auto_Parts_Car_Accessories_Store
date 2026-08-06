@@ -207,4 +207,20 @@ document.addEventListener('DOMContentLoaded', () => {
             document.documentElement.dir = document.documentElement.dir === 'rtl' ? 'ltr' : 'rtl';
         });
     }
+
+    // Scroll To Top Button
+    const scrollBtn = document.getElementById('scrollToTopBtn');
+    if (scrollBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                scrollBtn.classList.add('visible');
+            } else {
+                scrollBtn.classList.remove('visible');
+            }
+        });
+
+        scrollBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
 });
