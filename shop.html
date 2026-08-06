@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -93,7 +93,7 @@
                 </ul>
                 <div class="d-flex align-items-center gap-3">
                     <a href="#" class="text-white magnetic-wrap" id="themeToggle"><i data-lucide="moon"></i></a>
-                    <a href="#" class="text-white magnetic-wrap" id="rtlToggle"><i data-lucide="type"></i></a>
+                    <a href="#" class="text-white magnetic-wrap" id="rtlToggle"><i data-lucide="arrow-right-left"></i></a>
                     <a href="cart.html" class="text-white magnetic-wrap position-relative">
                         <i data-lucide="shopping-cart"></i>
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="background-color: var(--metallic-orange) !important;">
@@ -117,15 +117,15 @@
 
         <!-- Section 2: Filter Top Bar (Mobile friendly) -->
         <section class="py-3 border-bottom" style="border-color: rgba(255,255,255,0.05) !important; background: var(--matte-black);">
-            <div class="container d-flex justify-content-between align-items-center">
+            <div class="container d-flex justify-content-center justify-content-lg-between align-items-center gap-2 flex-wrap">
                 <button class="btn btn-outline-light d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#filterSidebar">
                     <i data-lucide="filter" class="me-2"></i> Filters
                 </button>
                 <div class="d-none d-lg-flex gap-3">
                     <span class="text-muted d-flex align-items-center"><i data-lucide="filter" class="me-2"></i> Advanced Filters Active</span>
                 </div>
-                <div>
-                    <select class="form-select bg-dark text-white border-secondary" style="width: 200px;">
+                <div class="text-center flex-lg-grow-0">
+                    <select class="form-select bg-dark text-white border-secondary mx-auto" style="min-width: 160px; max-width: 220px; width: auto;">
                         <option>Sort By: Featured</option>
                         <option>Price: Low to High</option>
                         <option>Price: High to Low</option>
@@ -138,9 +138,9 @@
         <!-- Section 3: Products & Filters Grid -->
         <section class="py-5" style="background: var(--matte-black);">
             <div class="container-fluid px-lg-5">
-                <div class="row">
-                    <!-- Filters Sidebar (Desktop) -->
-                    <div class="col-lg-3 d-none d-lg-block fade-up">
+                <div class="row shop-layout">
+                    <!-- Filters Sidebar (All Screens) -->
+                    <div class="col-12 col-lg-3 fade-up mb-4 mb-lg-0">
                         <div class="filter-sidebar rounded">
                             <h4 class="mb-4">Filter By</h4>
                             
@@ -225,7 +225,7 @@
                     <div class="col-lg-9">
                         <div class="row g-4">
                             <!-- Product Item 1 -->
-                            <div class="col-md-6 col-xl-4 fade-up">
+                            <div class="col-12 col-md-6 col-xl-4 fade-up">
                                 <div class="product-card h-100">
                                     <div class="position-relative overflow-hidden bg-white rounded-top" style="height: 400px;">
                                         <img src="images/ohlins_coilovers.png" class="w-100 h-100 object-fit-contain p-3" alt="Coilover">
@@ -249,7 +249,7 @@
                             </div>
                             
                             <!-- Product Item 2 -->
-                            <div class="col-md-6 col-xl-4 fade-up" style="transition-delay: 0.1s;">
+                            <div class="col-12 col-md-6 col-xl-4 fade-up" style="transition-delay: 0.1s;">
                                 <div class="product-card h-100">
                                     <div class="position-relative overflow-hidden bg-white rounded-top" style="height: 400px;">
                                         <img src="images/brembo_gt.png" class="w-100 h-100 object-fit-contain p-3" alt="Brakes">
@@ -273,7 +273,7 @@
                             </div>
 
                             <!-- Product Item 3 -->
-                            <div class="col-md-6 col-xl-4 fade-up" style="transition-delay: 0.2s;">
+                            <div class="col-12 col-md-6 col-xl-4 fade-up" style="transition-delay: 0.2s;">
                                 <div class="product-card h-100">
                                     <div class="position-relative overflow-hidden bg-white rounded-top" style="height: 400px;">
                                         <img src="images/titanium_exhaust.png" class="w-100 h-100 object-fit-contain p-3" alt="Exhaust">
@@ -297,7 +297,7 @@
                             </div>
                             
                             <!-- Product Item 4 -->
-                            <div class="col-md-6 col-xl-4 fade-up">
+                            <div class="col-12 col-md-6 col-xl-4 fade-up">
                                 <div class="product-card h-100">
                                     <div class="position-relative overflow-hidden bg-white rounded-top" style="height: 400px;">
                                         <img src="images/carbon_intake.png" class="w-100 h-100 object-fit-contain p-3" alt="Engine Part">
@@ -317,7 +317,7 @@
                             </div>
                             
                             <!-- Product Item 5 -->
-                            <div class="col-md-6 col-xl-4 fade-up">
+                            <div class="col-12 col-md-6 col-xl-4 fade-up">
                                 <div class="product-card h-100">
                                     <div class="position-relative overflow-hidden bg-white rounded-top" style="height: 400px;">
                                         <img src="images/forged_wheels.png" class="w-100 h-100 object-fit-contain p-3" alt="Track Wheels">
@@ -337,7 +337,7 @@
                             </div>
 
                             <!-- Product Item 6 -->
-                            <div class="col-md-6 col-xl-4 fade-up">
+                            <div class="col-12 col-md-6 col-xl-4 fade-up">
                                 <div class="product-card h-100">
                                     <div class="position-relative overflow-hidden bg-white rounded-top" style="height: 400px;">
                                         <img src="images/carbon_steering.png" class="w-100 h-100 object-fit-contain p-3" alt="Steering Wheel">

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -64,7 +64,7 @@
                 </ul>
                 <div class="d-flex align-items-center gap-3">
                     <a href="#" class="text-white magnetic-wrap" id="themeToggle"><i data-lucide="moon"></i></a>
-                    <a href="#" class="text-white magnetic-wrap" id="rtlToggle"><i data-lucide="type"></i></a>
+                    <a href="#" class="text-white magnetic-wrap" id="rtlToggle"><i data-lucide="arrow-right-left"></i></a>
                     <a href="cart.html" class="text-white magnetic-wrap position-relative">
                         <i data-lucide="shopping-cart"></i>
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="background-color: var(--metallic-orange) !important;">
@@ -81,7 +81,6 @@
         <!-- Section 1: Hero -->
         <section class="services-hero mt-0">
             <div class="container text-center fade-up position-relative z-1">
-                <i data-lucide="wrench" size="64" style="color: var(--metallic-orange); margin-bottom: 20px;"></i>
                 <h1 class="display-3 fw-bold mb-3">Professional Solutions</h1>
                 <p class="lead text-muted max-w-700 mx-auto">Beyond retail. We provide comprehensive supply chain solutions for modern performance workshops.</p>
             </div>
@@ -98,11 +97,13 @@
                         <span class="subheading d-block mb-2">B2B Core</span>
                         <h2 class="mb-4">OEM Parts Supply</h2>
                         <p class="text-muted mb-4">Consistent, reliable delivery of genuine OEM components for collision centers and independent repair facilities. We maintain massive inventory levels to ensure zero downtime for your bays.</p>
-                        <ul class="list-unstyled text-muted mb-4">
-                            <li class="mb-2"><i data-lucide="check" class="text-success me-2" size="18"></i> API integration with your management software</li>
-                            <li class="mb-2"><i data-lucide="check" class="text-success me-2" size="18"></i> Same-day dispatch on stock items</li>
-                            <li class="mb-2"><i data-lucide="check" class="text-success me-2" size="18"></i> Dedicated account manager</li>
-                        </ul>
+                        <div class="d-flex justify-content-center justify-content-lg-start">
+                            <ul class="list-unstyled text-muted mb-4 text-start">
+                                <li class="mb-2"><i data-lucide="check" class="text-success me-2" size="18"></i> API integration with your management software</li>
+                                <li class="mb-2"><i data-lucide="check" class="text-success me-2" size="18"></i> Same-day dispatch on stock items</li>
+                                <li class="mb-2"><i data-lucide="check" class="text-success me-2" size="18"></i> Dedicated account manager</li>
+                            </ul>
+                        </div>
                         <a href="contact.html" class="btn-secondary">Inquire About OEM Supply</a>
                     </div>
                 </div>
@@ -128,21 +129,27 @@
                 <h2 class="mb-5">Fleet & Bulk Order Solutions</h2>
                 <div class="row g-4 justify-content-center">
                     <div class="col-lg-4">
-                        <div class="glass-card p-4 h-100">
-                            <h4 class="mb-3">Tiered Pricing</h4>
-                            <p class="text-muted small">Aggressive discount structures based on monthly volume, maximizing your profit margins on standard maintenance items.</p>
+                        <div class="glass-card p-4 h-100 d-flex flex-column">
+                            <div class="d-flex align-items-center justify-content-center mb-3" style="min-height: 60px;">
+                                <h4 class="mb-0">Tiered Pricing</h4>
+                            </div>
+                            <p class="text-muted small mb-0">Aggressive discount structures based on monthly volume, maximizing your profit margins on standard maintenance items.</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <div class="glass-card p-4 h-100">
-                            <h4 class="mb-3">Consignment Inventory</h4>
-                            <p class="text-muted small">For high-volume partners, we offer consignment stock located physically at your premises for immediate access.</p>
+                        <div class="glass-card p-4 h-100 d-flex flex-column">
+                            <div class="d-flex align-items-center justify-content-center mb-3" style="min-height: 60px;">
+                                <h4 class="mb-0">Consignment Inventory</h4>
+                            </div>
+                            <p class="text-muted small mb-0">For high-volume partners, we offer consignment stock located physically at your premises for immediate access.</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <div class="glass-card p-4 h-100">
-                            <h4 class="mb-3">Custom Logistics</h4>
-                            <p class="text-muted small">Palletized freight, scheduled weekly drops, and priority air-freight options for critical components.</p>
+                        <div class="glass-card p-4 h-100 d-flex flex-column">
+                            <div class="d-flex align-items-center justify-content-center mb-3" style="min-height: 60px;">
+                                <h4 class="mb-0">Custom Logistics</h4>
+                            </div>
+                            <p class="text-muted small mb-0">Palletized freight, scheduled weekly drops, and priority air-freight options for critical components.</p>
                         </div>
                     </div>
                 </div>

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,6 +13,10 @@
             background: var(--matte-black-light);
             padding-top: 150px;
             padding-bottom: 50px;
+        }
+
+        body, main {
+            overflow-x: hidden;
         }
         
         .form-control, .form-select {
@@ -51,7 +55,6 @@
         .contact-info-card {
             background: var(--carbon-gray);
             border: 1px solid rgba(255,255,255,0.05);
-            padding: 40px;
             border-radius: 12px;
             height: 100%;
         }
@@ -79,7 +82,7 @@
                 </ul>
                 <div class="d-flex align-items-center gap-3">
                     <a href="#" class="text-white magnetic-wrap" id="themeToggle"><i data-lucide="moon"></i></a>
-                    <a href="#" class="text-white magnetic-wrap" id="rtlToggle"><i data-lucide="type"></i></a>
+                    <a href="#" class="text-white magnetic-wrap" id="rtlToggle"><i data-lucide="arrow-right-left"></i></a>
                     <a href="cart.html" class="text-white magnetic-wrap position-relative">
                         <i data-lucide="shopping-cart"></i>
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="background-color: var(--metallic-orange) !important;">
@@ -106,28 +109,28 @@
             <div class="container py-4">
                 <div class="row g-5">
                     <div class="col-lg-4 fade-up">
-                        <div class="contact-info-card">
-                            <h3 class="mb-4">Global Headquarters</h3>
+                        <div class="contact-info-card text-center text-lg-start p-4 p-xl-5">
+                            <h3 class="mb-4 text-break">Global Headquarters</h3>
                             
-                            <div class="d-flex align-items-start gap-3 mb-4">
+                            <div class="d-flex justify-content-center justify-content-lg-start align-items-start gap-3 mb-4">
                                 <i data-lucide="map-pin" style="color: var(--metallic-orange); flex-shrink: 0; margin-top: 5px;"></i>
-                                <div>
+                                <div class="text-start">
                                     <h5 class="mb-1">Address</h5>
                                     <p class="text-muted mb-0">100 Performance Drive<br>Motor City, MC 90210<br>United States</p>
                                 </div>
                             </div>
                             
-                            <div class="d-flex align-items-start gap-3 mb-4">
+                            <div class="d-flex justify-content-center justify-content-lg-start align-items-start gap-3 mb-4">
                                 <i data-lucide="phone" style="color: var(--metallic-orange); flex-shrink: 0; margin-top: 5px;"></i>
-                                <div>
+                                <div class="text-start">
                                     <h5 class="mb-1">Phone</h5>
                                     <p class="text-muted mb-0">Support: +1 (555) 123-4567<br>B2B Sales: +1 (555) 987-6543</p>
                                 </div>
                             </div>
                             
-                            <div class="d-flex align-items-start gap-3 mb-5">
+                            <div class="d-flex justify-content-center justify-content-lg-start align-items-start gap-3 mb-5">
                                 <i data-lucide="mail" style="color: var(--metallic-orange); flex-shrink: 0; margin-top: 5px;"></i>
-                                <div>
+                                <div class="text-start">
                                     <h5 class="mb-1">Email</h5>
                                     <p class="text-muted mb-0">info@autoparts-premium.com<br>dealer@autoparts-premium.com</p>
                                 </div>
@@ -135,6 +138,21 @@
                             
                             <h5 class="mb-3">Working Hours</h5>
                             <p class="text-muted small">Monday - Friday: 8:00 AM - 6:00 PM (EST)<br>Saturday: 9:00 AM - 2:00 PM (EST)<br>Sunday: Closed</p>
+                            <h5 class="mb-3 mt-5">Connect With Us</h5>
+                            <div class="d-flex justify-content-center justify-content-lg-start gap-3">
+                                <a href="#" class="social-icon" aria-label="Facebook">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                                </a>
+                                <a href="#" class="social-icon" aria-label="Twitter / X">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                                </a>
+                                <a href="#" class="social-icon" aria-label="Instagram">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                                </a>
+                                <a href="#" class="social-icon" aria-label="LinkedIn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
                     
