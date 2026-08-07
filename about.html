@@ -90,6 +90,20 @@
                 font-size: 3.2rem; /* Ensure text fits cleanly */
             }
         }
+        @media (max-width: 768px) {
+            .about-hero {
+                height: auto !important;
+                min-height: 60vh;
+                padding-top: 120px !important;
+                padding-bottom: 60px !important;
+            }
+            .about-hero h1 {
+                font-size: clamp(2rem, 10vw, 3.2rem) !important; /* Dynamically scale text to fit perfectly on all mobile models */
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                margin-top: 20px;
+            }
+        }
         @media (min-width: 1025px) {
             .break-1024 {
                 display: none !important;
