@@ -26,13 +26,19 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('../images/home2-hero.png') center/cover no-repeat;
+            background: url('../images/home2-hero.png') center/100% 100% no-repeat;
             background-image: url('images/home2-hero.png');
             filter: brightness(0.5);
+            background-size: 100% 100%; /* Keep image entirely in viewport */
         }
 
         [data-theme="light"] .premium-hero .hero-bg-image {
-            filter: brightness(0.8);
+            filter: brightness(0.4); /* Keep it dark in bright mode */
+        }
+
+        [data-theme="light"] .premium-hero h1,
+        [data-theme="light"] .premium-hero .text-white {
+            color: #ffffff !important;
         }
 
         .premium-hero::after {
@@ -42,26 +48,26 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(180deg, rgba(15, 15, 17, 0.2) 0%, var(--matte-black) 100%);
+            background: linear-gradient(180deg, rgba(15, 15, 17, 0.2) 0%, rgba(15, 15, 17, 0.8) 100%); /* Keep gradient dark so image doesn't fade to white fog */
             pointer-events: none;
         }
 
         @keyframes moveFrontBack {
             0% {
-                transform: scale(1.1);
+                transform: scale(1);
             }
 
             50% {
-                transform: scale(1.2);
+                transform: scale(1.02);
             }
 
             100% {
-                transform: scale(1.1);
+                transform: scale(1);
             }
         }
 
         .move-3d {
-            transform: scale(1.1);
+            transform: scale(1);
             animation: moveFrontBack 10s ease-in-out infinite;
         }
 
