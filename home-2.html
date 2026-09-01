@@ -31,6 +31,10 @@
             filter: brightness(0.5);
         }
 
+        [data-theme="light"] .premium-hero .hero-bg-image {
+            filter: brightness(0.8);
+        }
+
         .premium-hero::after {
             content: '';
             position: absolute;
@@ -131,16 +135,14 @@
 
     <main>
         <!-- Section 1: Premium Hero -->
-        <section class="premium-hero vh-100 d-flex align-items-end pb-5">
+        <section class="premium-hero vh-100 d-flex align-items-center">
             <div class="hero-bg-image move-3d"></div>
-            <div class="container position-relative z-1 mb-5 pb-5 fade-up">
+            <div class="container position-relative z-1 fade-up">
                 <div class="row justify-content-center">
                     <div class="col-lg-10 text-center">
                         <span class="text-uppercase tracking-widest text-white" style="letter-spacing: 4px;">Pinnacle of
                             Engineering</span>
-                        <h1 class="display-1 fw-900 mt-2 mb-4" style="line-height: 1;">Luxury Meets<br><span
-                                style="color: transparent; -webkit-text-stroke: 1px var(--metallic-orange);">Performance</span>
-                        </h1>
+                        <h1 class="display-1 fw-medium mt-2 mb-4 text-center" style="line-height: 1;">Luxury Meets<br><span class="hero-stroke-text">Performance</span></h1>
                         <a href="shop.html" class="btn-premium rounded-0">Explore Collection</a>
                     </div>
                 </div>
@@ -204,33 +206,35 @@
                     </div>
                 </div>
                 <div class="row g-2">
-                    <div class="col-lg-8 fade-up">
+                    <div class="col-lg-4 fade-up">
                         <div class="position-relative overflow-hidden group h-100" style="border-radius: 10px;">
                             <img src="images/Suspension Coilover.png" class="w-100 h-100 object-fit-cover"
-                                alt="Suspension Coilover" style="min-height: 400px; transition: 0.5s;">
-                            <div class="position-absolute bottom-0 start-0 w-100 p-4 text-center"
-                                style="background: rgba(15, 15, 17, 0.9);">
-                                <h3 class="fw-bold mb-2" style="color: #ffffff !important;">KW Variant 3 Coilovers</h3>
-                                <a href="shop.html" class="text-decoration-underline fw-bold" style="color: #ffffff !important;">View
+                                alt="Suspension Coilover" style="min-height: 300px; transition: 0.5s;">
+                            <div class="position-absolute bottom-0 start-0 w-100 p-4 text-center d-flex flex-column justify-content-center align-items-center"
+                                style="background: rgba(15, 15, 17, 0.9); height: 140px;">
+                                <h4 class="fw-medium mb-2 text-uppercase" style="color: #ffffff !important;">KW Variant 3 Coilovers</h4>
+                                <a href="shop.html" class="text-decoration-underline fw-medium mt-auto" style="color: #ffffff !important;">View
                                     Specifications</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 d-flex flex-column gap-2 fade-up" style="transition-delay: 0.2s;">
-                        <div class="position-relative overflow-hidden h-50" style="border-radius: 10px;">
+                    <div class="col-lg-4 fade-up" style="transition-delay: 0.1s;">
+                        <div class="position-relative overflow-hidden group h-100" style="border-radius: 10px;">
                             <img src="images/Akrapovič Exhaust.png" class="w-100 h-100 object-fit-cover"
-                                alt="Akrapovič Exhaust">
-                            <div class="position-absolute bottom-0 start-0 w-100 p-3 text-center"
-                                style="background: rgba(15, 15, 17, 0.9);">
-                                <h5 class="fw-bold mb-0" style="color: #ffffff !important;">Akrapovič Exhaust</h5>
+                                alt="Akrapovič Exhaust" style="min-height: 300px; transition: 0.5s;">
+                            <div class="position-absolute bottom-0 start-0 w-100 p-4 text-center d-flex flex-column justify-content-center align-items-center"
+                                style="background: rgba(15, 15, 17, 0.9); height: 140px;">
+                                <h4 class="fw-medium mb-0 text-uppercase" style="color: #ffffff !important;">Akrapovič Exhaust</h4>
                             </div>
                         </div>
-                        <div class="position-relative overflow-hidden h-50" style="border-radius: 10px;">
+                    </div>
+                    <div class="col-lg-4 fade-up" style="transition-delay: 0.2s;">
+                        <div class="position-relative overflow-hidden group h-100" style="border-radius: 10px;">
                             <img src="images/Brembo GT Kits.png" class="w-100 h-100 object-fit-cover"
-                                alt="Brembo GT Kits">
-                            <div class="position-absolute bottom-0 start-0 w-100 p-3 text-center"
-                                style="background: rgba(15, 15, 17, 0.9);">
-                                <h5 class="fw-bold mb-0" style="color: #ffffff !important;">Brembo GT Kits</h5>
+                                alt="Brembo GT Kits" style="min-height: 300px; transition: 0.5s;">
+                            <div class="position-absolute bottom-0 start-0 w-100 p-4 text-center d-flex flex-column justify-content-center align-items-center"
+                                style="background: rgba(15, 15, 17, 0.9); height: 140px;">
+                                <h4 class="fw-medium mb-0 text-uppercase" style="color: #ffffff !important;">Brembo GT Kits</h4>
                             </div>
                         </div>
                     </div>
@@ -274,7 +278,7 @@
         <!-- Section 5: Dealer Network & Brand Showcase -->
         <section class="py-5 position-relative" style="background: var(--carbon-gray);">
             <div class="container py-5 fade-up text-center">
-                <h2 class="display-5 fw-bold mb-5" style="letter-spacing: 2px;">GLOBAL NETWORK & AFFILIATES</h2>
+                <h2 class="display-5 fw-medium mb-5" style="letter-spacing: 2px;">GLOBAL NETWORK & AFFILIATES</h2>
 
                 <div class="row g-4 align-items-center opacity-50 mb-5 pb-4">
                     <!-- Brand Names instead of logos for premium minimal look -->
@@ -302,7 +306,7 @@
                                 perfect calibration.</p>
                             <a href="contact.html"
                                 class="btn-secondary rounded-pill px-5 py-3 text-uppercase tracking-widest d-inline-flex align-items-center justify-content-center"
-                                style="font-size: 14px; font-weight: 600;">
+                                style="font-size: 14px; font-weight: 500;">
                                 <i data-lucide="map-pin" class="me-2" style="width: 18px;"></i> Locate Dealer
                             </a>
                         </div>
@@ -318,7 +322,7 @@
             <div class="text-center position-relative z-1 fade-up p-5"
                 style="max-width: 800px;">
                 <i data-lucide="award" size="48" style="color: var(--metallic-orange); margin-bottom: 20px;"></i>
-                <h2 class="display-3 fw-bold mb-3">Redefine The Drive</h2>
+                <h2 class="display-3 fw-medium mb-3">Redefine The Drive</h2>
                 <p class="lead mb-5">Experience unparalleled service, exclusive access to limited run parts, and expert
                     consultation.</p>
                 <a href="register.html" class="btn-premium px-5 py-3 fs-5">Create Elite Account</a>
