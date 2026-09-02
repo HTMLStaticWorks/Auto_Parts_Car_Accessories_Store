@@ -204,20 +204,39 @@
             display: block;
             text-align: right;
         }
+
+        .page-controls {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+            z-index: 100;
+        }
+
+        @media (max-width: 768px) {
+            .page-controls {
+                position: static;
+                justify-content: flex-end;
+                margin-bottom: 15px;
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="auth-bg"></div>
     <div class="auth-particles"></div>
 
-    <div class="auth-card" id="loginCard">
-        <div class="d-flex justify-content-end gap-2 mb-2 w-100">
+    <div style="position: relative; width: 100%; max-width: 450px; margin: auto;">
+        <div class="page-controls">
             <div class="toggle-btn" id="themeBtn" title="Toggle Theme"><i data-lucide="moon" size="18"></i></div>
             <div class="toggle-btn" id="rtlBtn" title="Toggle RTL"><i data-lucide="arrow-right-left" size="18"></i></div>
         </div>
 
-        <div class="text-center mb-4">
-            <a href="index.html" class="d-inline-block text-decoration-none">
+        <div class="auth-card" id="loginCard">
+            <div class="text-center mb-4">
+                <a href="index.html" class="d-inline-block text-decoration-none">
                 <div class="brand-emblem mx-auto mb-3" style="width: 50px; height: 50px;">
                     <div class="brand-emblem-inner" style="width: 40px; height: 40px;">
                         <i data-lucide="settings" style="color: var(--metallic-orange); width: 24px;"></i>
@@ -266,6 +285,7 @@
             
             <p class="text-center text-muted small mb-0">Don't have an account? <a href="register.html" class="text-white text-decoration-underline">Register</a></p>
         </form>
+    </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>

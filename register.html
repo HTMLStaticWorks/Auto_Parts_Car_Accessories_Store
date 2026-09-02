@@ -244,19 +244,41 @@
             white-space: nowrap;
             letter-spacing: 1px;
         }
+
+        .page-controls {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+            z-index: 100;
+        }
+
+        @media (max-width: 768px) {
+            .register-container {
+                flex-direction: column;
+            }
+            .page-controls {
+                position: static;
+                justify-content: flex-end;
+                margin-bottom: 15px;
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
 
     <!-- Main Container -->
     <div class="container register-container py-2">
+        <div class="page-controls">
+            <div class="toggle-btn" id="themeBtn" title="Toggle Theme"><i data-lucide="moon" size="18"></i></div>
+            <div class="toggle-btn" id="rtlToggle" title="Toggle RTL"><i data-lucide="arrow-right-left" size="18"></i></div>
+        </div>
+
         <div class="glass-split-card row g-0">
             <!-- Form Side -->
-            <div class="col-12 p-4 p-sm-5">
-                <div class="d-flex justify-content-end gap-2 mb-1 w-100">
-                    <div class="toggle-btn" id="themeBtn" title="Toggle Theme"><i data-lucide="moon" size="18"></i></div>
-                    <div class="toggle-btn" id="rtlToggle" title="Toggle RTL"><i data-lucide="arrow-right-left" size="18"></i></div>
-                </div>
+            <div class="col-12 p-4 p-sm-5 pt-4">
                 
                 <div class="text-center mb-4">
                     <a href="index.html" class="d-inline-block text-decoration-none">

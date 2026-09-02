@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Premium Showcase | Auto Parts & Car Accessories</title>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f35b04' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='3'></circle><path d='M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z'></path></svg>">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f35b04' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='3'></circle><path d='M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z'></path></svg>">
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -29,11 +30,13 @@
             background: url('../images/home2-hero.png') center/100% 100% no-repeat;
             background-image: url('images/home2-hero.png');
             filter: brightness(0.5);
-            background-size: 100% 100%; /* Keep image entirely in viewport */
+            background-size: 100% 100%;
+            /* Keep image entirely in viewport */
         }
 
         [data-theme="light"] .premium-hero .hero-bg-image {
-            filter: brightness(0.4); /* Keep it dark in bright mode */
+            filter: brightness(0.4);
+            /* Keep it dark in bright mode */
         }
 
         [data-theme="light"] .premium-hero h1,
@@ -48,7 +51,8 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(180deg, rgba(15, 15, 17, 0.2) 0%, rgba(15, 15, 17, 0.8) 100%); /* Keep gradient dark so image doesn't fade to white fog */
+            background: linear-gradient(180deg, rgba(15, 15, 17, 0.2) 0%, rgba(15, 15, 17, 0.8) 100%);
+            /* Keep gradient dark so image doesn't fade to white fog */
             pointer-events: none;
         }
 
@@ -89,6 +93,32 @@
         .tech-card:hover {
             background: linear-gradient(90deg, rgba(243, 91, 4, 0.15) 0%, transparent 100%);
         }
+
+        /* Responsive Fixes for Hero Section */
+        @media (max-width: 768px) {
+            .premium-hero h1.display-1 {
+                font-size: 4rem !important;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .premium-hero h1.display-1 {
+                font-size: 8.5vw !important;
+            }
+            .premium-hero .hero-stroke-text {
+                font-size: 8.5vw !important;
+            }
+            .premium-hero .btn-premium {
+                white-space: nowrap;
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+                font-size: 0.85rem !important;
+            }
+            .premium-hero .tracking-widest {
+                letter-spacing: 2px !important;
+                font-size: 0.8rem;
+            }
+        }
     </style>
 </head>
 
@@ -126,7 +156,8 @@
                 </ul>
                 <div class="d-flex align-items-center gap-3">
                     <a href="#" class="text-white magnetic-wrap" id="themeToggle"><i data-lucide="moon"></i></a>
-                    <a href="#" class="text-white magnetic-wrap" id="rtlToggle"><i data-lucide="arrow-right-left"></i></a>
+                    <a href="#" class="text-white magnetic-wrap" id="rtlToggle"><i
+                            data-lucide="arrow-right-left"></i></a>
                     <a href="cart.html" class="text-white magnetic-wrap position-relative">
                         <i data-lucide="shopping-cart"></i>
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
@@ -149,7 +180,8 @@
                     <div class="col-lg-10 text-center">
                         <span class="text-uppercase tracking-widest text-white" style="letter-spacing: 4px;">Pinnacle of
                             Engineering</span>
-                        <h1 class="display-1 fw-medium mt-2 mb-4 text-center" style="line-height: 1;">Luxury Meets<br><span class="hero-stroke-text">Performance</span></h1>
+                        <h1 class="display-1 fw-medium mt-2 mb-4 text-center" style="line-height: 1;">Luxury
+                            Meets<br><span class="hero-stroke-text">Performance</span></h1>
                         <a href="shop.html" class="btn-premium rounded-0">Explore Collection</a>
                     </div>
                 </div>
@@ -219,8 +251,10 @@
                                 alt="Suspension Coilover" style="min-height: 300px; transition: 0.5s;">
                             <div class="position-absolute bottom-0 start-0 w-100 p-4 text-center d-flex flex-column justify-content-center align-items-center"
                                 style="background: rgba(15, 15, 17, 0.9); height: 140px;">
-                                <h4 class="fw-medium mb-2 text-uppercase" style="color: #ffffff !important;">KW Variant 3 Coilovers</h4>
-                                <a href="shop.html" class="text-decoration-underline fw-medium mt-auto" style="color: #ffffff !important;">View
+                                <h4 class="fw-medium mb-2 text-uppercase" style="color: #ffffff !important;">KW Variant
+                                    3 Coilovers</h4>
+                                <a href="shop.html" class="text-decoration-underline fw-medium mt-auto"
+                                    style="color: #ffffff !important;">View
                                     Specifications</a>
                             </div>
                         </div>
@@ -231,7 +265,8 @@
                                 alt="Akrapovič Exhaust" style="min-height: 300px; transition: 0.5s;">
                             <div class="position-absolute bottom-0 start-0 w-100 p-4 text-center d-flex flex-column justify-content-center align-items-center"
                                 style="background: rgba(15, 15, 17, 0.9); height: 140px;">
-                                <h4 class="fw-medium mb-0 text-uppercase" style="color: #ffffff !important;">Akrapovič Exhaust</h4>
+                                <h4 class="fw-medium mb-0 text-uppercase" style="color: #ffffff !important;">Akrapovič
+                                    Exhaust</h4>
                             </div>
                         </div>
                     </div>
@@ -241,7 +276,8 @@
                                 alt="Brembo GT Kits" style="min-height: 300px; transition: 0.5s;">
                             <div class="position-absolute bottom-0 start-0 w-100 p-4 text-center d-flex flex-column justify-content-center align-items-center"
                                 style="background: rgba(15, 15, 17, 0.9); height: 140px;">
-                                <h4 class="fw-medium mb-0 text-uppercase" style="color: #ffffff !important;">Brembo GT Kits</h4>
+                                <h4 class="fw-medium mb-0 text-uppercase" style="color: #ffffff !important;">Brembo GT
+                                    Kits</h4>
                             </div>
                         </div>
                     </div>
@@ -326,8 +362,7 @@
         <section class="py-5 position-relative overflow-hidden"
             style="min-height: 600px; display: flex; align-items: center; justify-content: center;">
 
-            <div class="text-center position-relative z-1 fade-up p-5"
-                style="max-width: 800px;">
+            <div class="text-center position-relative z-1 fade-up p-5" style="max-width: 800px;">
                 <i data-lucide="award" size="48" style="color: var(--metallic-orange); margin-bottom: 20px;"></i>
                 <h2 class="display-3 fw-medium mb-3">Redefine The Drive</h2>
                 <p class="lead mb-5">Experience unparalleled service, exclusive access to limited run parts, and expert
@@ -349,12 +384,35 @@
                         </div>
                         AP & CA
                     </div>
-                    <p class="text-muted pe-4">The ultimate destination for premium automotive parts, performance upgrades, and genuine accessories.</p>
+                    <p class="text-muted pe-4">The ultimate destination for premium automotive parts, performance
+                        upgrades, and genuine accessories.</p>
                     <div class="mt-4">
-                        <a href="#" class="social-icon" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
-                        <a href="#" class="social-icon" aria-label="X (Twitter)"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg></a>
-                        <a href="#" class="social-icon" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
-                        <a href="#" class="social-icon" aria-label="YouTube"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a>
+                        <a href="#" class="social-icon" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg></a>
+                        <a href="#" class="social-icon" aria-label="X (Twitter)"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
+                                <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
+                            </svg></a>
+                        <a href="#" class="social-icon" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg></a>
+                        <a href="#" class="social-icon" aria-label="YouTube"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z">
+                                </path>
+                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                            </svg></a>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-4">
@@ -430,7 +488,9 @@
             }
         });
     </script>
-<button id="scrollToTopBtn" aria-label="Scroll to top"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"></polyline></svg></button>
+    <button id="scrollToTopBtn" aria-label="Scroll to top"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg></button>
 </body>
 
 </html>
